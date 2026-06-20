@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>النتائج الدراسية - MyU</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="home.css">
+
+    <style>
+        .page-wrap {
+            max-width: 950px;
+            margin: 30px auto 50px;
+            padding: 0 15px;
+        }
+
+        .page-title {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 18px;
+        }
+
+        .page-title h2 {
+            font-size: 22px;
+            color: #565656;
+            font-weight: 700;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #1fb5ad;
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-size: 14px;
+            transition: background 0.2s;
+        }
+
+        .back-btn:hover {
+            background: #ff7878;
+        }
+
+        .term-title {
+            background: #ff7878;
+            color: #fff;
+            padding: 9px 14px;
+            font-size: 15px;
+            border-radius: 3px 3px 0 0;
+            margin-top: 18px;
+        }
+
+        table.transcript {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+        }
+
+        table.transcript th,
+        table.transcript td {
+            border: 1px solid #e0e0e0;
+            padding: 10px 12px;
+            text-align: center;
+            font-size: 14px;
+            color: #565656;
+        }
+
+        table.transcript thead th {
+            background: #efefef;
+            font-weight: 700;
+        }
+
+        table.transcript tbody tr:nth-child(even) {
+            background: #fafafa;
+        }
+
+        table.transcript tbody tr:hover {
+            background: #f0fbfa;
+        }
+
+        .term-summary {
+            text-align: left;
+            padding: 10px 14px;
+            background: #efefef;
+            font-size: 14px;
+            color: #444;
+            border: 1px solid #e0e0e0;
+            border-top: none;
+        }
+
+        .gpa-box {
+            margin-top: 25px;
+            background: #1fb5ad;
+            color: #fff;
+            text-align: center;
+            padding: 18px;
+            border-radius: 6px;
+            font-size: 18px;
+        }
+
+        .gpa-box b {
+            font-size: 24px;
+        }
+
+        @media (max-width: 560px) {
+            .page-title h2 { font-size: 18px; }
+            table.transcript th,
+            table.transcript td { padding: 8px 6px; font-size: 12px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== Header (نفس هيدر الصفحة الرئيسية) ===== -->
+    <header>
+        <div class="header-logo">
+            <img src="logo.png" alt="MyU"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='inline';">
+            <span class="logo-text-fallback" style="display:none;">My<b>U</b></span>
+            <span class="header-title">بوابة الخدمات الطلابية</span>
+        </div>
+
+        <div class="header-center">
+            <span id="todayDate">سبت 20 يونيو 2026</span>
+        </div>
+
+        <div class="header-left">
+            <div class="user-avatar">
+                <img src="myphoto.jpeg" alt="user"
+                     onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                <span class="avatar-fallback"><i class="fas fa-user"></i></span>
+            </div>
+            <a href="index.html" title="تسجيل الخروج"><i class="fas fa-power-off"></i></a>
+            <a href="#" title="تغيير كلمة المرور"><i class="fas fa-key"></i></a>
+            <a href="#" title="الإعدادات"><i class="fas fa-gear"></i></a>
+            <a href="#" class="lang">En</a>
+        </div>
+    </header>
+
+    <!-- ===== Main ===== -->
+    <main>
+        <div class="page-wrap">
+            <div class="page-title">
+                <h2>النتائج الدراسية</h2>
+                <a class="back-btn" href="home.html"><i class="fas fa-arrow-right"></i> رجوع</a>
+            </div>
+
+            <!-- الفصل الأول -->
+            <div class="term-title">الفصل الدراسي الأول 2025 / 2026</div>
+            <table class="transcript">
+                <thead>
+                    <tr>
+                        <th>المقرر</th>
+                        <th>الكود</th>
+                        <th>الساعات</th>
+                        <th>الدرجة</th>
+                        <th>التقدير</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>مقدمة في الحاسب الآلي</td><td>CS101</td><td>3</td><td>92</td><td>A</td></tr>
+                    <tr><td>رياضيات (1)</td><td>MA101</td><td>3</td><td>85</td><td>B+</td></tr>
+                    <tr><td>اللغة الإنجليزية</td><td>EN101</td><td>2</td><td>88</td><td>A-</td></tr>
+                    <tr><td>مبادئ الإدارة</td><td>BA102</td><td>3</td><td>79</td><td>B</td></tr>
+                    <tr><td>حقوق الإنسان</td><td>HR100</td><td>2</td><td>95</td><td>A</td></tr>
+                </tbody>
+            </table>
+            <div class="term-summary">عدد الساعات: 13 &nbsp;|&nbsp; المعدل الفصلي (GPA): 3.62</div>
+
+            <!-- الفصل الثاني -->
+            <div class="term-title">الفصل الدراسي الثاني 2025 / 2026</div>
+            <table class="transcript">
+                <thead>
+                    <tr>
+                        <th>المقرر</th>
+                        <th>الكود</th>
+                        <th>الساعات</th>
+                        <th>الدرجة</th>
+                        <th>التقدير</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>البرمجة (1)</td><td>CS102</td><td>3</td><td>90</td><td>A-</td></tr>
+                    <tr><td>رياضيات (2)</td><td>MA102</td><td>3</td><td>82</td><td>B</td></tr>
+                    <tr><td>مبادئ المحاسبة</td><td>AC101</td><td>3</td><td>87</td><td>B+</td></tr>
+                    <tr><td>الإحصاء</td><td>ST101</td><td>3</td><td>84</td><td>B</td></tr>
+                </tbody>
+            </table>
+            <div class="term-summary">عدد الساعات: 12 &nbsp;|&nbsp; المعدل الفصلي (GPA): 3.45</div>
+
+            <!-- المعدل التراكمي -->
+            <div class="gpa-box">
+                المعدل التراكمي (CGPA): <b>3.54</b> &nbsp;—&nbsp; التقدير العام: جيد جداً
+            </div>
+        </div>
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer>
+        <a href="#"><i class="fas fa-shield-alt"></i> سياسة خصوصية وتأمين البيانات</a>
+    </footer>
+
+    <script>
+        (function () {
+            var days = ['أحد', 'إثنين', 'ثلاثاء', 'أربعاء', 'خميس', 'جمعة', 'سبت'];
+            var months = ['يناير', 'فبراير', 'مارس', 'أبريل', 'مايو', 'يونيو',
+                'يوليو', 'أغسطس', 'سبتمبر', 'أكتوبر', 'نوفمبر', 'ديسمبر'];
+            var d = new Date();
+            document.getElementById('todayDate').textContent =
+                days[d.getDay()] + ' ' + d.getDate() + ' ' + months[d.getMonth()] + ' ' + d.getFullYear();
+        })();
+    </script>
+</body>
+</html>
